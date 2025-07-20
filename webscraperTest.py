@@ -8,7 +8,9 @@ r = requests.get(BBC)
 soup = BeautifulSoup(r.content, 'html.parser')
 
 # Find the Headlines
-media_list = soup.find_all("ul", class_="media-list")
+media_list = soup.find_all("h2", class_="sc-9d830f2a-3 jqQlce")
+
+print(media_list)
 
 headlines = media_list[0].text
 
